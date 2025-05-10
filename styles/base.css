@@ -30,15 +30,21 @@ body {
   header .highlight {
     color: #ffd700;
   }
+
+  ul { display: flex;
+  }
+  
+
   
   nav {
     display: flex;
-    justify-content: center;  /* centers the nav links horizontally */
+    justify-content: space-around;  /* centers the nav links horizontally */
     gap: 2rem;               /* space between each link */
     background-color: #333;
     padding: 1rem;
     flex-wrap: wrap;
     align-items: center;
+
   }
   
   nav a {
@@ -83,15 +89,18 @@ body {
   h3 {
     margin-top: 1rem;
     color: #1e3b70;
+    text-align: center;
   }
   
   /* About Content */
   .about-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: flex-start;
     text-align: wrap;
     gap: 1rem;
+  align-items: center;
+    justify-content: space-between;
   }
   
   .about-content img {
@@ -121,6 +130,8 @@ body {
   .card ul {
     list-style: none;
     padding: 0;
+    display: grid;
+
   }
   
   .card li {
