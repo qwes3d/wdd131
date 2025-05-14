@@ -8,62 +8,77 @@
     <meta name="author" content="Anyalechi Chidiebere">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="temples-large.css">
+   
     <link rel="stylesheet" href="temples.css">
 
+    <link rel="stylesheet" href="temples-large.css">
+
+    <script src="scripts.js"></script>
+
+   
+    
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1>Temple Album</h1>
-        <nav>
+        <!-- Hamburger button -->
+  <button id="menuBtn" aria-label="Toggle Menu">☰</button>
+
+  <!-- Navigation menu -->
+  <nav id="mainNav">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="active">Home</a></li>
                 <li><a href="old.html">Old</a></li>
                 <li><a href="new.html">New</a></li>
                 <li><a href="large.html">Large</a></li>
                 <li><a href="small.html">Small</a></li>
             </ul>
         </nav>
+
+         <!-- Current page label -->
+  <div class="page-title">Home</div>
     </header>
     <main>
-        <section>
-            <h2>Temple Images</h2>
+        
+        <section class="temple-grid">
+           
             <figure>
                 <img src="images/Layton Utah Temple.webp" alt="Temple 1">
-                <figcaption>Temple 1</figcaption>
+                <figcaption>Layton Utah Temple</figcaption>
             </figure>
             <figure>
                 <img src="images/Lindon Utah Temple.webp" alt="Temple 2">
-                <figcaption>Temple 2</figcaption>
+                <figcaption>Lindon Utah Temple</figcaption>
             </figure>
             <figure>
                 <img src="images/Logan Utah Temple.webp" alt="Temple 3">
-                <figcaption>Temple 3</figcaption>
+                <figcaption>Logan Utah Temple</figcaption>
             </figure>
             <figure>
                 <img src="images/Manti Utah Temple.webp" alt="Temple 4">
-                <figcaption>Temple 4</figcaption>
+                <figcaption>Manti Utah Temple</figcaption>
             </figure>
             <figure>
                 <img src="images/Ogden Utah Temple.webp" alt="Temple 5">
-                <figcaption>Temple 5</figcaption>
+                <figcaption>Ogden Utah Temple</figcaption>
             </figure>
             <figure>
                 <img src="images/Oquirrh Mountain Utah Temple.webp" alt="Temple 6">
-                <figcaption>Temple 6</figcaption>
+                <figcaption>Oquirrh Mountain Utah Temple</figcaption>
             </figure>
             <figure>
                 <img src="images/Orem Utah Temple.webp" alt="Temple 7">
-                <figcaption>Temple 7</figcaption>
+                <figcaption>Orem Utah Temple</figcaption>
             </figure>
             <figure>
                 <img src="images/Salt Lake Temple.webp" alt="Temple 8">
-                <figcaption>Temple 8</figcaption>
+                <figcaption>Salt Lake Temple</figcaption>
             </figure>
             <figure>
                 <img src="images/St. George Utah Temple.webp" alt="Temple 9">
-                <figcaption>Temple 9</figcaption>
+                <figcaption>St. George Utah Temple</figcaption>
             </figure>
         </section>
         <footer>
