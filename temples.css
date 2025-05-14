@@ -40,9 +40,13 @@ nav ul {
   flex-direction: column;
   background-color: #fff;
   position: absolute;
-  width: 100%;
-  top: 100%;
-  left: 0;
+   top: 100%; /* Drop below the header */
+  right: 10px; /* Align to the right */
+  width: 200px; /* Compact width */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  
+  z-index: 1000;
 }
 
 nav ul.open {
@@ -53,6 +57,22 @@ nav li {
   border-top: 1px solid #ddd;
 }
 
+nav ul li a {
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+}
+
+.temple-grid figure:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(40, 167, 69, 0.5);
+  }
 nav a {
   display: block;
   padding: 1rem;
@@ -70,6 +90,7 @@ nav a {
   background-color: transparent;
     color: #fff;
 }
+
 
 main {
   padding: 1rem;
