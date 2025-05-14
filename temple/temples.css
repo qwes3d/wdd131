@@ -67,6 +67,7 @@ nav ul li a:hover {
   background-color: #28a745;
   color: white;
   border-radius: 5px;
+  	text-decoration: underline double;
 }
 
 .temple-grid figure:hover {
