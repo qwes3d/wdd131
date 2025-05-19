@@ -53,12 +53,19 @@
 
 <section class="weather"></section>
      <div class="weather-info">
-        <h2>weather</h2>
+        <h2>
+  <span class="weather-icon-mobile">
+    <img src="images/weather.svg" alt="Weather icon" width="24" height="24">
+  </span>
+  <span class="weather-icon-large">⛅</span>
+  Weather
+</h2>
+
          <ul>
           <li><strong>temperature: </strong>10°c</li>
           <li><strong>condition: </strong>partly cloudy</li>
           <li><strong>wind: </strong>5km/h</li>
-          <li><strong>wind chill: </strong>9.8°c</li>
+          <li><strong>wind chill: </strong> <span id="windchill"></span></li>
          
 
   </ul>
