@@ -72,12 +72,13 @@
   margin-right: 0.3rem;
 }
 
-.weather-heading::after {
-  content: " ⛅";
-  font-size: 1.2em;
-  margin-left: 0.3rem;
-  vertical-align: middle;
-}
+.weather::after {
+    content: "⛅"; /* Unicode emoji or you can use a background-image instead */
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    display: inline-block;
+    vertical-align: middle;
+  }
 
 
   h2 {

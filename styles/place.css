@@ -48,10 +48,6 @@ h2 {
   margin: 0;
 }
 
-.overlay-content {
-  display: block;
-}
-
 .content {
   display: flex;
   flex-direction: column;
@@ -70,6 +66,7 @@ h2 {
 
 .weather-heading::after {
   content: "";
+    display:  none;
 }
 
 .weather-icon-large {
