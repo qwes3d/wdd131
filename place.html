@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Media Query Example</title>
+    <meta name="description" content="A simple HTML document with a media query example.">
+    <meta name="author" content="Anyalechi Chidiebere">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="styles/place-large.css" >
+
+    <link rel="stylesheet" href="styles/place.css">
+    
+    <script src="scripts/place.js" defer></script>
+
+    
+</head>
+<body>
+    <main>
+        <header class= "header">
+            <h1>Madagascar</h1>
+            </header>
+            
+  <main>
+    <section class="hero">
+        <picture>
+  <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+  <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+  <img src="images/hero-large.webp" alt="Hero Photo" width="500" height="250">
+</picture>
+    </section>
+
+    <section class="content">
+         <div class="data">
+        <h2>Data</h2>
+         <ul>
+          <li><strong>Area: </strong>587,041</li>
+          <li><strong>population: </strong>27,691,018</li>
+          <li><strong>capital: </strong>Antananarivo</li>
+          <li><strong>language: </strong>Malagasy, French</li>
+          <li><strong>currency: </strong>Malagasy Ariary</li>
+          <li><strong>Time zone: </strong>UTC +3</li>
+          <li><strong>calling code: </strong>+261</li>
+          <li><strong>internet TLD: </strong>.mg </li>
+
+  </ul>
+</div>
+ <div class="weather-info">
+        <h2>weather</h2>
+         <ul>
+          <li><strong>temperature: </strong>10°c</li>
+          <li><strong>condition: </strong>partly cloudy</li>
+          <li><strong>wind: </strong>5km/h</li>
+          <li><strong>wind chill: </strong>9.8°c</li>
+         
+
+  </ul>
+</div>
+
+    </section>
+
+  </main>
+
+  <footer> 
+   
+    <div class="footer-note">
+      <p>WDD231 Class Project | Anyalechi Chidiebere<br>
+        &copy; 20xx Timbuktu Chamber of Commerce<br>
+        Last Modified: <span id="last-modified"></span></p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
