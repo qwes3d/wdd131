@@ -62,6 +62,15 @@
     text-align: center;
     
   }
+
+  .weather-heading::after {
+  content: "";
+    display:  none;
+}
+  .weather-icon-mobile img {
+    vertical-align: middle;
+    display: none;
+  }
   
   .weather-icon-mobile {
   display: none;
@@ -72,7 +81,7 @@
   margin-right: 0.3rem;
 }
 
-.weather::after {
+.weather-icon-large {
     content: "⛅"; /* Unicode emoji or you can use a background-image instead */
     margin-left: 0.5rem;
     font-size: 1.5rem;
