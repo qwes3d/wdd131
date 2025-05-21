@@ -6,9 +6,9 @@ menuButton.addEventListener('click', () => {
 
    // Toggle the button symbol
   if (navMenu.classList.contains("open")) {
-    menuBtn.textContent = "✖"; // Unicode 'X'
+    menuButton.textContent = "✖"; // Unicode 'X'
   } else {
-    menuBtn.textContent = "☰"; // Hamburger
+    menuButton.textContent = "☰"; // Hamburger
   }
 
 });
