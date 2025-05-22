@@ -36,10 +36,10 @@
     justify-content: space-between;
     gap: 2rem;
     background-color: rgba(255, 255, 255, 0.85);
-    padding: 1.rem;
+    padding: 1rem;
     border-radius: 0px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-     width: fit-content;
+    max-width: fit-content;
     max-width: 90%;
   }
 
@@ -83,7 +83,7 @@
     font-size: 1.2rem;
     margin-left: 0.5rem;
   }
-  }
+  
 
 
   h2 {
@@ -91,3 +91,4 @@
     margin-bottom: 1rem;
     color: #333;
   }
+}
