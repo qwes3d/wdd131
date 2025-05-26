@@ -1,54 +1,39 @@
-/* temples.css */
-
+/* Base styles for mobile-first */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 1 rem;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-header {
-  background-color: #075e16;
+.header {
+  background-color: #204060;
+  color: white;
   padding: 1rem;
-  text-align: left;
-  position: relative;
-  color: #fff;
+  text-align: center;
 }
 
-h1 {
-  margin: 0;
-    font-size: 2.rem;
-    font-weight: bold;
-    text-align: center;
+nav {
+  background-color: #306090;
+  padding: 0.5rem;
+  position: relative;
 }
 
 #menuBtn {
-  font-size: 2rem;
   background: none;
   border: none;
+  font-size: 2rem;
+  color: white;
   cursor: pointer;
-  display: block;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background-color: white;
 }
 
 nav ul {
   list-style: none;
-  margin: 0;
   padding: 0;
-  display: none; /* Hide by default */
+  margin: 0;
+  display: none;
   flex-direction: column;
-  background-color: #fff;
-  position: absolute;
-   top: 100%; /* Drop below the header */
-  right: 10px; /* Align to the right */
-  width: 200px; /* Compact width */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 6px;
-  
-  z-index: 1000;
 }
 
 nav ul.open {
@@ -56,79 +41,51 @@ nav ul.open {
 }
 
 nav li {
-  border-top: 1px solid #ddd;
+  padding: 0.5rem 0;
+  text-align: center;
 }
 
-nav ul li a {
-  text-decoration: none;
-  display: block;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav ul li a:hover {
-  background-color: #28a745;
-  color: white;
-  border-radius: 5px;
-  text-decoration: underline double;
-}
-
-.temple-grid figure:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(40, 167, 69, 0.5);
-  }
 nav a {
-  display: block;
-  padding: 1rem;
-  text-align: center;
+  color: white;
   text-decoration: none;
-  color: #fff;
-  flex: 1 1 100%;
-  font-size: 1.2rem;
-}
-
-.page-title {
-  margin-top: 1rem;
-  font-size: 1.2rem;
   font-weight: bold;
-  text-align: center;
-  background-color: transparent;
-    color: #fff;
 }
 
-
-main {
-  padding: 1rem;
-    background-color: #133123;
-    display: grid;
+#searchBox {
+  width: 90%;
+  margin: 1rem auto;
+  display: block;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-/* temples.css */
-
-.temple-grid {
+.temple-cards {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
   padding: 1rem;
 }
 
-.temple-grid figure {
-  margin: 0;
+.temple-cards section {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  color: aqua;
 }
 
-.temple-grid img {
+.temple-cards img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 6px;
 }
-
 
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #263238;
-  color: #fff;
-  font-weight: bold;
-  font-size: 2.rem;
+  background-color: #204060;
+  color: white;
+  font-size: 0.9rem;
 }

@@ -1,13 +1,13 @@
-// Hamburger Menu Toggle
 const menuButton = document.getElementById('menuBtn');
 const navMenu = document.querySelector('nav ul');
 
+// Toggle navigation
 menuButton.addEventListener('click', () => {
   navMenu.classList.toggle('open');
-  menuButton.textContent = navMenu.classList.contains('open') ? '✖' : '☰';
+  menuButton.textContent = navMenu.classList.contains("open") ? "✖" : "☰";
 });
 
-// Footer Dynamic Content
+// Footer
 document.getElementById('currentyear').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
 
@@ -61,52 +61,26 @@ const temples = [
     dedicated: "1983, December, 2",
     area: 116642,
     imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
-  },
-    {
-    templeName: "Salt Lake City Utah",
-  location: "Salt Lake City, Utah, United States",
-    dedicated: "1893, April, 6",
-    area: 25000,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/400x250/salt-lake-city-temple-exterior-2.jpg"
-    },
-
-    {
-    templeName: "San Diego California",
-    location: "San Diego, California, United States",
-    dedicated: "2009, May, 16",
-    area: 108000,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-diego-california/400x250/san-diego-temple-exterior-2.jpg"
-    }
-
+  }
 ];
 
-// Get year from dedicated date string
-function getYear(dedicatedStr) {
-  return parseInt(dedicatedStr.split(',')[0]);
-}
-
-// Render temple cards
-function createTempleCards(filteredTemples) {
+// Render function
+function createTempleCards(data) {
   const container = document.querySelector('.temple-cards');
-  container.innerHTML = '';
+  container.innerHTML = ''; // Clear existing
 
-  if (filteredTemples.length === 0) {
-    container.innerHTML = '<p>No temples match your search.</p>';
-    return;
-  }
-
-  filteredTemples.forEach(temple => {
-    const card = document.createElement('section');
-    const name = document.createElement('h3');
-    const location = document.createElement('p');
-    const dedicated = document.createElement('p');
-    const area = document.createElement('p');
-    const image = document.createElement('img');
+  data.forEach(temple => {
+    let card = document.createElement('section');
+    let name = document.createElement('h3');
+    let location = document.createElement('p');
+    let dedicated = document.createElement('p');
+    let area = document.createElement('p');
+    let image = document.createElement('img');
 
     name.textContent = temple.templeName;
     location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
     dedicated.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
-    area.innerHTML = `<span class="label">Area:</span> ${temple.area.toLocaleString()} sq ft`;
+    area.innerHTML = `<span class="label">Area:</span> ${temple.area} sq ft`;
 
     image.setAttribute('src', temple.imageUrl);
     image.setAttribute('alt', temple.templeName);
@@ -117,49 +91,40 @@ function createTempleCards(filteredTemples) {
     card.appendChild(location);
     card.appendChild(dedicated);
     card.appendChild(area);
+
     container.appendChild(card);
   });
 }
 
-// Filter temples by menu selection
-function filterTemples(criteria) {
-  let filtered;
+// Filters
+document.getElementById('home').addEventListener('click', () => createTempleCards(temples));
 
-  switch (criteria) {
-    case 'old':
-      filtered = temples.filter(t => getYear(t.dedicated) < 1900);
-      break;
-    case 'new':
-      filtered = temples.filter(t => getYear(t.dedicated) > 2000);
-      break;
-    case 'large':
-      filtered = temples.filter(t => t.area > 90000);
-      break;
-    case 'small':
-      filtered = temples.filter(t => t.area < 10000);
-      break;
-    default:
-      filtered = temples;
-  }
-
+document.getElementById('old').addEventListener('click', () => {
+  const filtered = temples.filter(t => new Date(t.dedicated.split(',')[0]) < new Date(1900, 0));
   createTempleCards(filtered);
-}
-
-// Search by name
-document.getElementById('searchBox').addEventListener('input', (e) => {
-  const term = e.target.value.toLowerCase().trim();
-  const result = temples.filter(t =>
-    t.templeName.toLowerCase().includes(term)
-  );
-  createTempleCards(result);
 });
 
-// Event listeners for nav
-document.getElementById('home').addEventListener('click', () => filterTemples('home'));
-document.getElementById('old').addEventListener('click', () => filterTemples('old'));
-document.getElementById('new').addEventListener('click', () => filterTemples('new'));
-document.getElementById('large').addEventListener('click', () => filterTemples('large'));
-document.getElementById('small').addEventListener('click', () => filterTemples('small'));
+document.getElementById('new').addEventListener('click', () => {
+  const filtered = temples.filter(t => new Date(t.dedicated.split(',')[0]) > new Date(2000, 0));
+  createTempleCards(filtered);
+});
 
-// Initial display
-filterTemples('home');
+document.getElementById('large').addEventListener('click', () => {
+  const filtered = temples.filter(t => t.area > 90000);
+  createTempleCards(filtered);
+});
+
+document.getElementById('small').addEventListener('click', () => {
+  const filtered = temples.filter(t => t.area < 10000);
+  createTempleCards(filtered);
+});
+
+// Search Functionality
+document.getElementById('searchBox').addEventListener('input', (e) => {
+  const searchTerm = e.target.value.toLowerCase();
+  const filtered = temples.filter(t => t.templeName.toLowerCase().includes(searchTerm));
+  createTempleCards(filtered);
+});
+
+// Initial render
+createTempleCards(temples);
