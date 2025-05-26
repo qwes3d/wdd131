@@ -61,7 +61,22 @@ const temples = [
     dedicated: "1983, December, 2",
     area: 116642,
     imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
-  }
+  },
+  {
+    templeName: "Birmingham England",
+    location: "Birmingham, England",
+    dedicated: "2000, September, 16",
+    area: 40000,
+    imageUrl: "https://www.churchofjesuschrist.org/imgs/154ee0c38f920aa66074c0338fe29f535e0d0a65/full/500%2C/0/default.jpg"
+  },
+    {
+    templeName: "Salt Lake City Utah",
+    location: "Salt Lake City, Utah, United States",
+    dedicated: "1893, May, 9",
+    area: 253015,
+    imageUrl: "https://www.churchofjesuschrist.org/imgs/92c33bcbf9cf85483e008d6871f8ced5f6d7b661/full/500%2C/0/default.jpg" 
+  
+},
 ];
 
 // Render function
