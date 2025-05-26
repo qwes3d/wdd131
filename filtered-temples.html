@@ -24,36 +24,32 @@
 <body>
     <header class="header">
         <h1>Temple Album</h1>
-        <!-- Hamburger button -->
-  <button id="menuBtn" aria-label="Toggle Menu">☰</button>
-  
+  <!-- Menu -->
+<nav>
+  <button id="menuBtn">☰</button>
+  <ul>
+    <li><a href="#" id="home">Home</a></li>
+    <li><a href="#" id="old">Old</a></li>
+    <li><a href="#" id="new">New</a></li>
+    <li><a href="#" id="large">Large</a></li>
+    <li><a href="#" id="small">Small</a></li>
+  </ul>
+</nav>
 
-  <!-- Navigation menu -->
-  <nav id="mainNav">
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
-            </ul>
-        </nav>
+<!-- Search Box -->
+<input type="text" id="searchBox" placeholder="Search temples by name..." />
 
-         <!-- Current page label -->
-  
-    </header>
-    <main>
-        <div class="page-title">Home</div>
-        <section class="temple-grid">
-           
-                
-        </section>
-        <footer>
-            
-        <p>&copy; <span id="currentyear"></span> 🌸 Anyalechi Chidiebere PrinceDaniel (Igbo man)🌸 Biafra</p>
-        <p id="lastModified"></p>
-      </footer>
+<!-- Container for cards -->
+<div class="temple-cards"></div>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; <span id="currentyear"></span> 🌸 Anyalechi Chidiebere PrinceDaniel (Igbo man)🌸 Biafra</p>
+  <p id="lastModified"></p>
+</footer>
     </main>
    
 </body>
 </html>
+
+
