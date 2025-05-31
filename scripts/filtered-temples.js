@@ -77,6 +77,13 @@ const temples = [
     imageUrl: "https://www.churchofjesuschrist.org/imgs/92c33bcbf9cf85483e008d6871f8ced5f6d7b661/full/500%2C/0/default.jpg" 
   
 },
+{
+  templeName: "Copenhagen Denmark",
+  location: "Copenhagen, Denmark",
+  dedicated: "1927, September, 30",
+  area: 10000,
+  imageUrl: "https://www.churchofjesuschrist.org/imgs/1c7f9b8d6f3e2d0a4d0b5f6a1e5e3c5b4d8c5a65/full/500%2C/0/default.jpg"
+}
 ];
 
 // Render function
