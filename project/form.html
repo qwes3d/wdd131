@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Review Form</title>
+  <link rel="stylesheet" href="style/form.css" />
+  <script src="script/form.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Product Review</h1>
+    <form action="review.html" method="get">
+      <!-- Product Select -->
+      <label for="product">Product Name<span>*</span></label>
+      <select id="product" name="product" required>
+        <option value="" disabled selected>Select a Product ...</option>
+        <!-- Options will be inserted via JavaScript -->
+      </select>
+
+      <!-- Overall Rating -->
+      <fieldset>
+        <legend>Overall Rating<span>*</span></legend>
+        <div class="rating">
+          <input type="radio" id="star5" name="rating" value="5" required>
+          <label for="star5" title="5 stars">&#9733;</label>
+          <input type="radio" id="star4" name="rating" value="4">
+          <label for="star4" title="4 stars">&#9733;</label>
+          <input type="radio" id="star3" name="rating" value="3">
+          <label for="star3" title="3 stars">&#9733;</label>
+          <input type="radio" id="star2" name="rating" value="2">
+          <label for="star2" title="2 stars">&#9733;</label>
+          <input type="radio" id="star1" name="rating" value="1">
+          <label for="star1" title="1 star">&#9733;</label>
+        </div>
+      </fieldset>
+
+      <!-- Installation Date -->
+      <label for="installDate">Date of Installation<span>*</span></label>
+      <input type="date" id="installDate" name="installDate" required>
+
+      <!-- Useful Features -->
+      <fieldset>
+        <legend>Useful Features (check all that apply)</legend>
+        <label><input type="checkbox" id="feature1" name="features" value="Durability"> Durability</label><br>
+        <label><input type="checkbox" id="feature2" name="features" value="Performance"> Performance</label><br>
+        <label><input type="checkbox" id="feature3" name="features" value="Design"> Design</label><br>
+        <label><input type="checkbox" id="feature4" name="features" value="Energy Efficiency"> Energy Efficiency</label>
+      </fieldset>
+
+      <!-- Written Review -->
+      <label for="review">Written Review</label>
+      <textarea id="review" name="review" rows="4" placeholder="Share your thoughts..."></textarea>
+
+      <!-- User Name -->
+      <label for="username">Your Name</label>
+      <input type="text" id="username" name="username" placeholder="Optional">
+
+      <!-- Submit -->
+      <input type="submit" value="Submit Review">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+</body>
+</html>
