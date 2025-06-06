@@ -105,6 +105,18 @@ footer {
   color: white;
   background-color: rgb(46, 15, 46)
 }
+textarea {
+  color: #333; /* Ensure readable text */
+  background-color: #f4f4f4; /* Maintain contrast */
+}
+textarea {
+  padding-bottom: 10px;
+ 
+}
+textarea {
+  font-size: 16px; /* Single definition */
+  max-width: 500px; /* Ensures consistency */
+}
 
 
 
@@ -116,7 +128,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
+ 
   overflow: hidden;
   z-index: 9999;
 }
