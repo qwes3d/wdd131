@@ -15,3 +15,8 @@ window.addEventListener('DOMContentLoaded', () => {
     select.appendChild(option);
   });
 });
+
+
+// Footer dynamic content
+document.getElementById('currentyear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;

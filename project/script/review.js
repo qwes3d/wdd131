@@ -21,3 +21,34 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("username").textContent = data.username;
     document.getElementById("reviewSection").style.display = "block";
 });
+
+
+// Footer dynamic content
+document.getElementById('currentyear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const wrapper = document.getElementById("balloon-wrapper");
+
+  for (let i = 0; i < 20; i++) {
+    const balloon = document.createElement("div");
+    balloon.className = "balloon";
+    
+    // Random colors
+    const colors = ["#FF69B4", "#FFD700", "#87CEEB", "#32CD32", "#FF4500", "#9370DB"];
+    balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+    // Random position and delay
+    balloon.style.left = Math.random() * 100 + "vw";
+    balloon.style.animationDelay = (Math.random() * 1.5) + "s";
+    balloon.style.transform = `scale(${Math.random() * 0.5 + 0.75})`;
+
+    wrapper.appendChild(balloon);
+  }
+
+  // Optional: remove after animation ends
+  setTimeout(() => {
+    wrapper.remove();
+  }, 6000);
+});

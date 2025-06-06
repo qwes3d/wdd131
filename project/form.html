@@ -8,8 +8,9 @@
   <script src="script/form.js" defer></script>
 </head>
 <body>
+  <h1>Product Review</h1>
   <main>
-    <h1>Product Review</h1>
+
     <form action="review.html" method="get">
       <!-- Product Select -->
       <label for="product">Product Name<span>*</span></label>
@@ -41,19 +42,21 @@
 
       <!-- Useful Features -->
       <fieldset>
-        <legend>Useful Features (check all that apply)</legend>
+        <legend>which features did you find useful in the product? (check all that apply)</legend>
         <label><input type="checkbox" id="feature1" name="features" value="Durability"> Durability</label><br>
         <label><input type="checkbox" id="feature2" name="features" value="Performance"> Performance</label><br>
         <label><input type="checkbox" id="feature3" name="features" value="Design"> Design</label><br>
-        <label><input type="checkbox" id="feature4" name="features" value="Energy Efficiency"> Energy Efficiency</label>
+        <label><input type="checkbox" id="feature4" name="features" value="Ease of use"> Ease of Use</label>
       </fieldset>
 
       <!-- Written Review -->
-      <label for="review">Written Review</label>
+      <label for="Review">Your Review <span style="color: #004999;">(Optional)</span></label>
+
       <textarea id="review" name="review" rows="4" placeholder="Share your thoughts..."></textarea>
 
       <!-- User Name -->
-      <label for="username">Your Name</label>
+      <label for="username">Your Name <span style="color: #004999;">(Optional)</span></label>
+
       <input type="text" id="username" name="username" placeholder="Optional">
 
       <!-- Submit -->
@@ -61,8 +64,10 @@
     </form>
   </main>
 
+ 
   <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <p>&copy; <span id="currentyear"></span> 🌸 Anyalechi Chidiebere PrinceDaniel (Igbo man)🌸 Biafra</p>
+    <p id="lastModified"></p>
   </footer>
 </body>
 </html>

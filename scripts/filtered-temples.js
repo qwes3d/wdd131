@@ -8,9 +8,9 @@ menuButton.addEventListener('click', () => {
 });
 
 // Footer
-document.getElementById('currentyear').textContent = new Date().getFullYear();
+dcument.getElementById('currentyear').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
-
+o
 // Temple Data
 const temples = [
   {
