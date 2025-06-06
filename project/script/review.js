@@ -19,7 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("features").textContent = data.features || "None selected";
     document.getElementById("review").textContent = data.review;
     document.getElementById("username").textContent = data.username;
-    document.getElementById("reviewSection").style.display = "block";
+    const reviewSection = document.getElementById("reviewSection");
+    if (reviewSection) {
+      reviewSection.style.display = "block";
+    }
 });
 
 
