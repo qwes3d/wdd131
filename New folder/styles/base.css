@@ -172,7 +172,14 @@ footer {
 /*services */
 .our_services {
   gap: 1.5rem;
-  margin: 2rem 0;
+  margin: 2rem
+ 0;
+}
+.our_services h2{
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  background-color: aqua;
 }
 .our_service {
   background: #f9f9f9;
