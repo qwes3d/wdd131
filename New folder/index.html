@@ -3,32 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nnamotion | Construction Equipment & Materials</title>
-  
+  <title>Nnamotion</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- CSS Files -->
-  <link rel="stylesheet" href="styles/normalize.css" />
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/base.css" />
   <link rel="stylesheet" href="styles/responsive.css" />
+  <script src="scripts/main.js"></script>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1>Nnamotion</h1>
-    <nav>
+    <div class="header-wrapper">
+      <h1>Nnamotion</h1>
+      
+    </div>
+     <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+    <nav class="main-nav">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="service.html">Services</a></li>
         <li><a href="quote.html">Get a Quote</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="testimonial.html">Testimonials</a></li>
       </ul>
     </nav>
   </header>
+
 
   <main>
     <!-- Hero Section -->
@@ -49,18 +54,26 @@
       </ul>
     </section>
 
-    <!-- Featured Products -->
-    <section>
-      <h2>Featured Products</h2>
-      <div>
-        <img src="images/concrete-mixer.jpg" alt="Concrete Mixer">
-        <p>Concrete Mixer – Durable and efficient for all-scale jobs.</p>
+    <section class="featured-products">
+  <h2>Featured Products</h2>
+  <div class="product">
+    <img src="images/concrete.webp" alt="Heavy-duty concrete mixer">
+    <p>Concrete Mixer – Durable and efficient for all-scale jobs.</p>
+  </div>
+  <div class="product">
+    <img src="images/cement.webp" alt="Stacked cement bags">
+    <p>High-Quality Cement – Bulk and retail options available.</p>
+  </div>
+  <div class="product">
+        <img src="images/comapctor.webp" alt="compactor">
+        <p>compactors – Reliable and durable for any surface work.</p>
       </div>
-      <div>
-        <img src="images/cement-bags.jpg" alt="Cement Bags">
-        <p>High-Quality Cement – Bulk and retail options available.</p>
-      </div>
-    </section>
+  <div class="product">
+    <img src="images/stones.webp" alt="Crushed stones">
+    <p>Crushed Stones – Perfect for foundations and landscaping.</p>
+  </div>
+</section>
+
   </main>
 
   <footer>

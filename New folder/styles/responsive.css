@@ -1,0 +1,115 @@
+/* responsive.css – Tablets & Desktops (min-width: 768px) */
+@media screen and (min-width: 768px), (min-width: 1024px) {
+  body {
+    padding: 2rem;
+  }
+
+  .header-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2rem;
+    background: none;
+    padding: 0;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero {
+    text-align: left;
+    max-width: 960px;
+    margin: 0 auto 3rem;
+    padding: 3rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .featured-products, .features-items {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 960px;
+    margin: 0 auto 2rem;
+  }
+
+  .features {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+
+  footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.5rem 0;
+  }
+
+  .our_services, .how_we_work {
+    text-align: center;
+  }
+  .our_services.h2, .how_we_work h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color-scheme: var(--primary-color);
+    background-color: aqua;
+  }
+
+  /*about us*/
+  .about_intro {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .about_intro h2, .mission h2, .vision h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+  }
+  .vision, .mission, .about_intro p {
+    
+    text-align: center;
+  }
+  .contact_intro {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .contact-form-wrapper {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    font-size: larger;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .testimonial-intro {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .author {
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+}
