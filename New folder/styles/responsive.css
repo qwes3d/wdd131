@@ -25,11 +25,12 @@
   header h1 {
     font-size: 2.5rem;
   }
-
-  .hero {
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
     text-align: left;
-    max-width: 960px;
-    margin: 0 auto 3rem;
     padding: 3rem;
   }
 
@@ -37,10 +38,43 @@
     font-size: 2rem;
   }
 
-  .featured-products, .features-items {
+  
+  .hero p {
+    font-size: 1.125rem;
+  }
+
+  .hero-image {
+    max-width: 600px;
+     height: auto;
+  margin: 0 auto 1rem auto;
+  display: block;
+  object-fit: contain;
+}
+ .hero .cta {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  .hero.cta:hover {
+    background-color: var(--accent-color-hover);
+  }
+
+  .featured-products {
     grid-template-columns: repeat(3, 1fr);
     max-width: 960px;
     margin: 0 auto 2rem;
+  }
+
+  .features-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .features-items.h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color-scheme: light dark;
+    color: var(--primary-color);
+    background-color: aqua;
   }
 
   .features {
@@ -63,7 +97,8 @@
   .our_services.h2, .how_we_work h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color-scheme: var(--primary-color);
+    color-scheme: light dark;
+    color: var(--primary-color);
     background-color: aqua;
   }
 
@@ -80,6 +115,7 @@
     font-size: 2rem;
     margin-bottom: 1rem;
     color: var(--primary-color);
+    color-scheme: light dark;
     text-align: center;
   }
   .vision, .mission, .about_intro p {
@@ -116,4 +152,21 @@
     font-weight: bold;
     color: var(--primary-color);
   }
+  .author:hover {
+    color: var(--accent-color);
+    
+  }
+  #product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .modal-content {
+    max-width: 600px;
+  }
+
+  .product-card img {
+    height: 160px;
+  }
+
+
 }

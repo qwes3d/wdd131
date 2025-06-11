@@ -11,7 +11,8 @@
   
   <link rel="stylesheet" href="styles/base.css" >
   <link rel="stylesheet" href="styles/responsive.css" >
-  <script src="scripts/main.js"></script>
+  <script src="scripts/main.js" defer></script>
+
 
 </head>
 <body>
@@ -35,48 +36,37 @@
   </header>
 
 
-  <main>
-    <section>
-      <h2>Our Products</h2>
-      <p>Explore our range of construction equipment and building materials:</p>
-      <ul>
-        <li><strong>Heavy Equipment:</strong> Concrete mixers, compactors, scaffolds</li>
-        <li><strong>Materials:</strong> Cement, rebar, bricks, sand, tiles</li>
-        <li><strong>Accessories:</strong> Tools, gloves, PPE</li>
-      </ul>
-    </section>
+ <main>
+  <section>
+    <h2>Our Products</h2>
+    <p>Explore our range of construction equipment and building materials:</p>
+  </section>
 
-    <section class="featured-items">
-      <h3>Featured Items</h3>
-      <div class="product">
-        <img src="images/scalffolding.webp" alt="Scaffold">
-        <p>Steel Scaffolding – Reliable and durable for elevated work.</p>
-      </div>
-      <div class="product">
-        <img src="images/rebar.webp" alt="Rebar">
-        <p>High-Tensile Rebar – Perfect for structural strength.</p>
+  <section class="featured-items">
+    <h3>Featured Items</h3>
+    <div id="controls">
+  <input type="text" id="search-input" placeholder="🔍 Search products...">
+  <select id="category-filter">
+    <option value="">All Categories</option>
+  </select>
+</div>
 
-      </div>
-      <div class="product">
-        <img src="images/sand.webp" alt="sand">
-        <p>Sand – Reliable and durable, quick delivry</p>
-      </div>
-      <div class="product">
-        <img src="images/tiles.webp" alt="tiles">
-        <p>High quality tiles – Perfect for beauty and touch of strength.</p>
-        
-      </div>
-      <div class="product">
-        <img src="images/comapctor.webp" alt="compactor">
-        <p>compactors – Reliable and durable for any surface work.</p>
-      </div>
-      <div class="product">
-        <img src="images/bricks.webp" alt="bricks">
-        <p>High quality Bricks – Perfect for structural strength.</p>
-        
-      </div>
-    </section>
-  </main>
+    <div id="product-grid" class="featured-grid"></div>
+  </section>
+</main>
+
+<!-- Modal dialog -->
+<div id="product-modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="close-modal" class="close-button">&times;</span>
+    <h3 id="modal-title"></h3>
+    <img id="modal-image" src="" alt="">
+    <p id="modal-description"></p>
+    <p><strong>Category:</strong> <span id="modal-category"></span></p>
+    <p><strong>Price:</strong> <span id="modal-price"></span></p>
+  </div>
+</div>
+
 
   <footer>
     <p>&copy; 2025 Nnamotion. All rights reserved.</p>

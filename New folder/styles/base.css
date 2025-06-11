@@ -118,10 +118,20 @@ nav a:hover {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
   background-color: var(--accent-color);
-  color: white;
+  color: rgb(15, 2, 2);
   text-decoration: none;
   font-weight: bold;
   border-radius: 0.5rem;
+}
+
+
+.hero-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto 1rem auto;
+  display: block;
+  object-fit: contain;
 }
 
 h2 {
@@ -193,3 +203,138 @@ footer {
   gap: 1.5rem;
   margin: 2rem 0;
 }
+ .author {
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  .author:hover {
+    color: var(--accent-color);
+    
+  }
+
+  /* === PRODUCT GRID & CARDS === */
+#product-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  padding: 1rem;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+  padding: 1rem;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card h4 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.product-card p {
+  margin: 0.25rem 0;
+  color: #666;
+}
+
+/* === MODAL === */
+#product-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+#product-modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#close-modal {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+}
+
+#modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.modal-content h2 {
+  margin: 0.5rem 0;
+  color: #222;
+}
+
+.modal-content p {
+  margin: 0.25rem 0;
+  color: #444;
+}
+
+
+#controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+#search-input {
+  flex: 1;
+  padding: 0.5rem;
+}
+#category-filter {
+  padding: 0.5rem;
+}
+
