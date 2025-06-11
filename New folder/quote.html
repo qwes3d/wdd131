@@ -11,7 +11,6 @@
 
   <link rel="stylesheet" href="styles/base.css" >
   <link rel="stylesheet" href="styles/responsive.css" >
-  <script src="scripts/main.js"></script>
 
 </head>
 <body>
@@ -34,34 +33,39 @@
     </nav>
   </header>
 
+  
   <main>
     <section>
       <h2>Request a Quote</h2>
-      <p>Fill out the form below to receive a detailed quote for your project needs.</p>
+      <p>Fill out the form below and we’ll get back to you with a detailed quote tailored to your project needs.</p>
 
-      <form action="#" method="post">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required >
-
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required >
-
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" >
-
-        <label for="product">Product or Service Needed:</label>
-        <input type="text" id="product" name="product" required >
-
-        <label for="details">Project Details:</label>
-        <textarea id="details" name="details" rows="5" placeholder="Please describe your needs..."></textarea>
-
-        <button type="submit" class="cta">Submit Request</button>
+      <form id="quoteForm" action="quote-action.html" method="GET">
+        <label>
+          Full Name:
+          <input type="text" name="name" placeholder="Your full name" required>
+        </label>
+        <label>
+          Email Address:
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>
+          Product Needed:
+          <input type="text" name="product" placeholder="e.g. Concrete Mixer" required>
+        </label>
+        <label>
+          Project Details:
+          <textarea name="details" placeholder="Briefly describe your requirements..." required></textarea>
+        </label>
+        <button type="submit">Submit Request</button>
       </form>
     </section>
   </main>
 
+  
+
   <footer>
     <p>&copy; 2025 Nnamotion. All rights reserved.</p>
   </footer>
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>

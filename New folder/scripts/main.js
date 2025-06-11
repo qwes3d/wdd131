@@ -36,6 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
       image: "images/concrete.WEBP",
     },
     {
+      name: "formwork",
+      category: "Building Materials",
+      description: "High-quality formwork for concrete structures.",
+      price: 800,
+      image: "images/formwork.WEBP",
+      },
+    {
       name: "Steel Rods",
       category: "Building Materials",
       description: "High-quality steel rods for reinforced concrete structures.",
@@ -182,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const card = document.createElement("div");
       card.className = "product-card";
       card.innerHTML = `
-        <img src="${product.image}" alt="${product.name}">
+        <img src="${product.image}" alt="${product.name}"loading="lazy">
         <h4>${product.name}</h4>
         <p>${product.category}</p>
         <p><strong>₵${product.price}</strong></p>
@@ -230,3 +237,5 @@ document.addEventListener("DOMContentLoaded", () => {
   populateCategoryFilter(allProducts);
   displayProducts(allProducts);
 });
+
+

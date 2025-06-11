@@ -191,6 +191,7 @@ footer {
   color: var(--primary-color);
   background-color: aqua;
 }
+
 .our_service {
   background: #f9f9f9;
   padding: 1rem;
@@ -236,6 +237,17 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Consistent Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Prevent overflow */
+body {
+  overflow-x: hidden;
+}
 .product-card img {
   width: 100%;
   height: auto;
@@ -306,13 +318,27 @@ footer {
   color: #666;
   cursor: pointer;
 }
-
-#modal-image {
-  width: 100%;
+.modal-content img {
+  max-width: 100%;
+  max-height: 400px; /* or any preferred value */
+  width: auto;
   height: auto;
+  display: block;
+  margin: 0 auto 1rem;
   border-radius: 8px;
-  margin-bottom: 1rem;
+  object-fit: contain;
 }
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
 
 .modal-content h2 {
   margin: 0.5rem 0;
@@ -324,17 +350,38 @@ footer {
   color: #444;
 }
 
-
+/* Controls container */
 #controls {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 1rem;
+  align-items: center;
 }
+
+/* Search input and button container */
+.search-group {
+  display: flex;
+  flex: 1;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+/* Input field styling */
 #search-input {
   flex: 1;
   padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
 }
-#category-filter {
-  padding: 0.5rem;
+
+/* Go button styling */
+#search-button {
+  padding: 0.5rem 1rem;
+  font-size:
+  1rem;
 }
+
 
