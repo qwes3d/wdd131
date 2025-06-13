@@ -215,6 +215,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Apply filters
+  
+
+  // Only run filters if elements exist on this page
+  if (categoryFilter && searchInput && searchButton) {
   function applyFilters() {
     const searchText = searchInput.value.trim().toLowerCase();
     const selectedCategory = categoryFilter.value;
