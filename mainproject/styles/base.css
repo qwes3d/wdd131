@@ -223,7 +223,7 @@ footer {
 }
 
 .product-card {
-  background: #fff;
+  background: #98e6e9;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   overflow: hidden;
@@ -260,12 +260,12 @@ body {
 .product-card h4 {
   margin: 0.5rem 0 0.25rem;
   font-size: 1.1rem;
-  color: #333;
+  color: #080303;
 }
 
 .product-card p {
   margin: 0.25rem 0;
-  color: #666;
+  color: #1d0404;
 }
 
 /* === MODAL === */
