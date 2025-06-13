@@ -235,10 +235,11 @@ document.addEventListener("DOMContentLoaded", () => {
   searchInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter") applyFilters();
   });
-  }
+  
 
   populateCategoryFilter(allProducts);
   displayProducts(allProducts);
+  }
 });
 
 
