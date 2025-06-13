@@ -216,9 +216,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Apply filters
   
-
-  // Only run filters if elements exist on this page
-  if (categoryFilter && searchInput && searchButton) {
   function applyFilters() {
     const searchText = searchInput.value.trim().toLowerCase();
     const selectedCategory = categoryFilter.value;
@@ -234,11 +231,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   categoryFilter.addEventListener("change", applyFilters);
   searchButton.addEventListener("click", applyFilters);
-    searchInput.addEventListener("keypress", (e) => {
-      if (e.key === "Enter") applyFilters();
-    });
-  
-    populateCategoryFilter(allProducts);
-    displayProducts(allProducts);
-  }
+  searchInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") applyFilters();
   });
+
+  populateCategoryFilter(allProducts);
+  displayProducts(allProducts);
+});
+
+
