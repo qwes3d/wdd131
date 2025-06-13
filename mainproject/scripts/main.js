@@ -228,18 +228,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     displayProducts(filtered);
   }
-  if (categoryFilter && searchInput && searchButton) {
 
   categoryFilter.addEventListener("change", applyFilters);
   searchButton.addEventListener("click", applyFilters);
   searchInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter") applyFilters();
   });
-  
 
   populateCategoryFilter(allProducts);
   displayProducts(allProducts);
-  }
 });
 
 
