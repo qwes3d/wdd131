@@ -215,11 +215,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Apply filters
-function applyFilters() {
-const searchText = searchInput.value.trim().toLowerCase();
-const selectedCategory = categoryFilter.value;
+  function applyFilters() {
+    const searchText = searchInput.value.trim().toLowerCase();
+    const selectedCategory = categoryFilter.value;
 
-const filtered = allProducts.filter(product => {
+    const filtered = allProducts.filter(product => {
       const matchesCategory = !selectedCategory || product.category === selectedCategory;
       const matchesSearch = product.name.toLowerCase().includes(searchText);
       return matchesCategory && matchesSearch;
