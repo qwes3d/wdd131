@@ -239,6 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   
     populateCategoryFilter(allProducts);
-    displayProducts(allProducts);
-  }
+      displayProducts(allProducts);
+      
+    }
   });
